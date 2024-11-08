@@ -4,7 +4,7 @@ pipeline {
         stage ("1. update the system"){
             steps {
                 sh "mkdir -p test"
-                sh "touch test.txt"
+                sh "touch test-1.txt"
             }
         }
 
@@ -14,7 +14,7 @@ pipeline {
                 sh "ls -a"
                 sh "lsblk"
                 sh "free -m"
-                sh "touch test.txt"
+                sh "touch test-2.txt"
                 sh "df -h"
                 sh "du -ksh"
                 sh "touch iostat.txt"
@@ -34,10 +34,14 @@ pipeline {
                 sh "uptime"
                 sh "iostat"
             }
-       stage ("5. uptime of the system"){
+        }
+
+        stage ("5. view the list of images and containers"){
             steps{
-                sh "uptime"
-                sh "iostat"
+                sh "docker -v"
+                sh "docker images"
+                sh "docker ps"
+                sh "docker ps -a"
             }
         }
     } 
