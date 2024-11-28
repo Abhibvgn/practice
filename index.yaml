@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  my-helm:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-28T10:08:26.323951736Z"
+    description: A Helm chart for Kubernetes
+    digest: 5b8d363e7d250e73a098b266c2d8dead8146f3ad09b319e501a06dec1161a58f
+    name: my-helm
+    type: application
+    urls:
+    - https://github.com/Abhibvgn/practice.git/my-helm-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-11-28T10:08:26.32221766Z"
